@@ -34,7 +34,7 @@ import { createStore } from 'redux';
 
 Decorator adds own methods to the function `dispatch`:
 
-#### store.dispatch.on(actionName, callback):fn
+### store.dispatch.on(actionName, callback):fn
 
 Add a listener to the action. The callback function will be executed each time the target action will affect to the state.
 
@@ -56,7 +56,7 @@ store.dispatch(todo('Just do it again')); // <--
 ```
 An important fact is that the function will be called only when the action will trigger a subscription.
 
-#### store.dispatch.after(actionName):promise
+### store.dispatch.after(actionName):promise
 The promise will be resolved immediately if the action has already occurred or it will be resolved at the next action dispatch.
 
 Arguments:
@@ -82,7 +82,7 @@ store.dispatch(todo('Just do it again'));
 // Console: Just do
 ```
 
-#### store.dispatch.record(actionName, callback):fn
+### store.dispatch.record(actionName, callback):fn
 The callback function will be called for each action that has already occurred and for each all next.
 
 Arguments:
@@ -106,7 +106,7 @@ store.dispatch(todo('Forever')); // <--
 // Console: Forever
 ```
 
-#### store.dispatch.before(actionName, callback):fn
+### store.dispatch.before(actionName, callback):fn
 The callback function will be called once before the action will be passed to the reducer. Thus, you get a state without the effect of the action.
 
 Arguments:
@@ -141,7 +141,7 @@ store.dispatch({ type: INCREASE }); // <~~
 // Console: after 2
 ```
 
-#### store.dispatch.beforeEach(actionName, callback):fn
+### store.dispatch.beforeEach(actionName, callback):fn
 The callback function will be called for each time, before the action will be passed to the reducer.
 
 Arguments:
@@ -152,7 +152,7 @@ Arguments:
 
 Works same as method `before`, but countless times.
 
-#### store.dispatch.waitFor(actionName):promise
+### store.dispatch.waitFor(actionName):promise
 The callback function will be executed once when the action will affect the state.
 
 Arguments:
@@ -168,3 +168,14 @@ store.dispatch.waitFor(ADD_TODO)
 store.dispatch(todo('Do it again')); // <--
 // Console: Do it again
 ```
+
+### store.dispatch.clear()
+
+Erases all actions history.
+
+## Author
+
+Vladimir Kalmykov <vladimirmorulus@gmail.com>
+
+## License
+MIT
