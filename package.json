@@ -2,7 +2,7 @@
   "name": "redux-store-emitter",
   "version": "1.0.0-rc",
   "description": "Redux-store with ability to listen to an actions",
-  "main": "dist/index.js",
+  "main": "dist/redux-store-emitter.js",
   "scripts": {
     "start": "node_modules/.bin/babel src/index.js --out-file dist/redux-store-emitter.js && jest",
     "test": "jest"
