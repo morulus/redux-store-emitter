@@ -38,7 +38,7 @@ Decorator adds own methods to the function `dispatch`:
 
 Add a listener to the action. The callback function will be executed each time the target action will affect to the state.
 
-Arguments:
+__Arguments__:
 - **actionName** {string} Action name
 - **callback** {function} Event handler
 
@@ -59,7 +59,7 @@ An important fact is that the function will be called only when the action will 
 ### store.dispatch.after(actionName):promise
 The promise will be resolved immediately if the action has already occurred or it will be resolved at the next action dispatch.
 
-Arguments:
+__Arguments__:
 - **actionName** {string} Action name
 
 **Returns**: {promise}
@@ -85,7 +85,7 @@ store.dispatch(todo('Just do it again'));
 ### store.dispatch.record(actionName, callback):fn
 The callback function will be called for each action that has already occurred and for each all next.
 
-Arguments:
+__Arguments__:
 - **actionName** {string} Action name
 - **callback** {function} Event handler
 
@@ -109,7 +109,7 @@ store.dispatch(todo('Forever')); // <--
 ### store.dispatch.before(actionName, callback):fn
 The callback function will be called once before the action will be passed to the reducer. Thus, you get a state without the effect of the action.
 
-Arguments:
+__Arguments__:
 - **actionName** {string} Action name
 - **callback** {function} Event handler
 
@@ -144,7 +144,7 @@ store.dispatch({ type: INCREASE }); // <~~
 ### store.dispatch.beforeEach(actionName, callback):fn
 The callback function will be called for each time, before the action will be passed to the reducer.
 
-Arguments:
+__Arguments__:
 - **actionName** {string} Action name
 - **callback** {function} Event handler
 
@@ -155,7 +155,7 @@ Works same as method `before`, but countless times.
 ### store.dispatch.waitFor(actionName):promise
 The callback function will be executed once when the action will affect the state.
 
-Arguments:
+__Arguments__:
 - **actionName** {string} Action name
 
 **Returns**: {promise}
