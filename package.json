@@ -1,0 +1,38 @@
+{
+  "name": "redux-store-emitter",
+  "version": "1.0.0-rc",
+  "description": "Redux-store with ability to listen to an actions",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node_modules/.bin/babel src/index.js --out-file dist/redux-store-emitter.js && jest",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morulus/redux-store-emitter.git"
+  },
+  "author": "Vladimir Kalmykov <vladimirmorulus@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/morulus/redux-store-emitter/issues"
+  },
+  "homepage": "https://github.com/morulus/redux-store-emitter#readme",
+  "dependencies": {
+    "redux": ">=3.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-jest": "^18.0.0",
+    "babel-plugin-syntax-trailing-function-commas": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "."
+    ],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ]
+  }
+}
