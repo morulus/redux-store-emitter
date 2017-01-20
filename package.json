@@ -1,6 +1,6 @@
 {
   "name": "redux-store-emitter",
-  "version": "1.0.0-rc",
+  "version": "1.0.0",
   "description": "Redux-store with ability to listen to an actions",
   "main": "dist/redux-store-emitter.js",
   "scripts": {
